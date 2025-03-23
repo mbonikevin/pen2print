@@ -6,6 +6,7 @@
     <title>Pen2Print</title>
     <link rel="shortcut icon" type="image/x-icon" href="./assets/logo.ico">
     <link rel="stylesheet" href="./styles/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -18,11 +19,34 @@
                     <h1>Pen2Print.</h1>
                 </div>
             </nav>
+            <!-- upload -->
+            <div class="upload_container">
+                <div class="upload_cta">
+                    <h1>Upload an image to extract text</h1>
+                    <button class="upload_btn">Upload Image</button>
+                </div>
+                <div class="upload_defaults">
+                    <h2>No Images? Try one of these:</h2>
+                    <div class="upload_examples">
+                        <button><img src="./assets/example1.jpeg" alt=""></button>
+                        <button><img src="./assets/example2.png" alt=""></button>
+                        <button><img src="./assets/example3.webp" alt=""></button>
+                        <button><img src="./assets/example4.jpg" alt=""></button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right">
-
+            <div class="tools">
+                <button><i class='bx bx-copy'></i></button>
+                <button><i class='bx bx-copy'></i></button>
+                <button><i class='bx bx-copy'></i></button>
+                <button><i class='bx bx-copy'></i></button>
+            </div>
         </div>
     </div>
 </body>
+<!-- scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
 
 </html>
