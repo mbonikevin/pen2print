@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 
 :root {
-  --main-color: #2e68d4;
+  --main-color: #3173ec;
   --main-color-weak: #6e92d49d;
   --dark-bg: #1b1b1b;
   --dark-bg-secondary: #272727;
@@ -66,6 +66,7 @@ nav,
   justify-content: space-between;
   padding: 0 10px;
   user-select: none;
+  z-index: 20;
   /* border-bottom: 1px solid var(--border-color); */
   /* position: absolute;
   top: 0;
@@ -200,7 +201,7 @@ nav h1 {
   background: transparent;
   padding: 5px 5px 5px 10px;
   text-align: right;
-  min-width: 40px;
+  min-width: 45px;
   color: #4e4e4e;
   font-size: 16px;
   white-space: pre-wrap;
@@ -223,4 +224,75 @@ nav h1 {
   overflow-y: scroll;
   background: transparent;
   color: var(--text-color);
+}
+
+.container {
+  --uib-size: 40px;
+  --uib-color: var(--main-color);
+  --uib-speed: 2s;
+  --uib-bg-opacity: 0;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+  will-change: transform;
+  overflow: visible;
+}
+
+.car {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+  will-change: stroke-dasharray, stroke-dashoffset;
+  transition: stroke 0.5s ease;
+}
+
+.track {
+  fill: none;
+  stroke: var(--uib-color);
+  opacity: var(--uib-bg-opacity);
+  transition: stroke 0.5s ease;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    stroke-dasharray: 0, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 75, 150;
+    stroke-dashoffset: -25;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+.loading_container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--text-color-weak);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    background-color: var(--dark-bg);
+    transition: .3s;
+    pointer-events: none;
 }
