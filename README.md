@@ -7,6 +7,8 @@
 **Built on**: March 24, 2025  
 **Powered by**: Pen to Print API from [RapidAPI](https://rapidapi.com)
 
+**Demo**: [mbonikevin.tech](https://mbonikevin.tech)
+
 ## Overview
 
 Pen2Print is a web application designed to extract text from handwritten images. It uses the Pen to Print API from RapidAPI to convert scanned handwritten content into digital text. The app features a simple interface that allows users to upload handwritten images and receive text extraction results in real-time.
@@ -116,6 +118,7 @@ If HAProxy is working correctly, the output should show it listening on port 80.
 You can also perform manual testing by accessing the domain multiple times and verifying that the requests are being routed to both web servers by watching the server name in the website title
 
 ## Conclusion
+
 This guide outlines how to deploy the Pen2Print web application on two servers, configure a load balancer to distribute traffic, and test the system to ensure everything works as expected. With the help of the Pen to Print API, the application offers a fast and accurate handwriting recognition solution.
 
 Thank you for using Pen2Print, and special thanks to the Pen to Print API team for making this possible!
