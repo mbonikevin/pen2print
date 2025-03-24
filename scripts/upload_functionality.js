@@ -38,8 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         upload_status.innerHTML = "Processing...";
       }, 1600);
       setTimeout(() => {
+        upload_status.innerHTML = "Printing...";
+      }, 3200);
+      setTimeout(() => {
         upload_status.innerHTML = "Doing something...";
-      }, 3400);
+      }, 4800);
     } else {
       //   upload_cta.style.display = "flex";
       //   upload_defaults.style.display = "block";

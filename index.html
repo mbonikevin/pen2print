@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,10 +8,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="./assets/logo.ico">
     <link rel="stylesheet" href="./styles/main.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
     <div class="wrapper">
+        <!-- settings modal -->
+        <div class="info" id="info">
+            <div class="info_container"></div>
+        </div>
+
         <div class="left">
             <!-- nav -->
             <nav>
@@ -42,7 +49,7 @@
                         <button class="example-image-btn" data-src="./assets/example2.png"><img
                                 src="./assets/example2.png" alt=""></button>
                         <button class="example-image-btn" data-src="./assets/example3.webp"><img
-                                src="./assets/example3.webp" alt=""></button>
+                                src="./assets/example3.png" alt=""></button>
                         <button class="example-image-btn" data-src="./assets/example4.jpg"><img
                                 src="./assets/example4.jpg" alt=""></button>
                     </div>
@@ -52,11 +59,11 @@
         </div>
         <div class="right">
             <div class="tools">
-                <button><i class='bx bx-info-circle'></i></button>
-                <button><i class='bx bxs-download'></i></button>
-                <button><i class='bx bx-cog'></i></button>
-                <button><i class='bx bx-copy'></i></button>
-                <button><i class='bx bx-trash'></i></button>
+                <button id="txtdownloadBtn" onclick="downloadTxt()"><i class='bx bx-save'></i></button>
+                <!-- <button onclick="showSettings()"><i class='bx bx-cog'></i></button> -->
+                <button onclick="copyText()"><i id="copy_icon" class='bx bx-copy'></i></button>
+                <button onclick="emptyTextEditor()"><i class='bx bx-trash'></i></button>
+                <button onclick="Showinfo()"><i class='bx bx-info-circle'></i></button>
             </div>
             <div class="editor_container">
                 <div class="line_numbers" id="lineNumbers">1</div>
@@ -68,8 +75,13 @@
 </body>
 <!-- scripts -->
 <script src="config.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
 <script src="./scripts/base_functionalities.js"></script>
 <script src="./scripts/upload_functionality.js"></script>
+<script src="./scripts/download_functionality.js"></script>
+<script src="./scripts/delete_functionality.js"></script>
+<script src="./scripts/copy_functionality.js"></script>
+<script src="./scripts/info_functionalities.js"></script>
 
 </html>

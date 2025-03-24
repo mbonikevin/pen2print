@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 
 :root {
-  --main-color: #3173ec;
-  --main-color-weak: #6e92d49d;
+  --main-color: #3a614d;
+  --main-color-weak: #3a614d9d;
   --dark-bg: #1b1b1b;
   --dark-bg-secondary: #272727;
   --dark-bg-third: #363636ea;
@@ -21,6 +21,13 @@
     sans-serif;
   outline: none;
   border: none;
+}
+
+.toastify {
+  box-shadow: none !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+  font-size: 14px !important;
 }
 
 body {
@@ -51,6 +58,7 @@ body {
   display: flex;
   align-items: start;
   justify-content: start;
+  gap: 0px;
   padding-right: 5px;
   flex-direction: column;
   position: relative;
@@ -79,6 +87,7 @@ nav,
 }
 
 .tools button,
+.tools a,
 nav button {
   height: 40px;
   width: 40px;
@@ -168,30 +177,36 @@ nav h1 {
   gap: 3px;
 }
 
-.upload_examples button {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
+.upload_examples button,
+.upload_examples a {
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
   overflow: hidden;
   transition: 0.2s;
-  border: 3px solid var(--dark-bg);
+  border: 4px solid var(--dark-bg);
   opacity: 0.8;
   cursor: pointer;
   &&:hover {
     border-color: var(--main-color);
     opacity: 1;
   }
+  &&:active {
+    transform: scale(0.92);
+  }
 }
 
-.upload_examples button img {
+.upload_examples button img,
+.upload_examples a img {
   width: fit-content;
+  min-width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .editor_container {
   display: flex;
-  gap: 0px;
+  gap: 5px;
   width: 100%;
   height: calc(100svh - 60px);
   overflow: hidden;
@@ -245,7 +260,7 @@ nav h1 {
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;
   stroke-linecap: round;
-  stroke-width: 2px;
+  stroke-width: 3px;
   animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
   will-change: stroke-dasharray, stroke-dashoffset;
   transition: stroke 0.5s ease;
@@ -278,21 +293,67 @@ nav h1 {
   }
 }
 
-.loading_container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 15px;
-    color: var(--text-color-weak);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    opacity: 0;
-    background-color: var(--dark-bg);
-    transition: .3s;
-    pointer-events: none;
+.loading_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  color: var(--text-color-weak);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  background-color: var(--dark-bg);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.info {
+  width: 100%;
+  height: 100svh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  background-color: var(--dark-bg);
+  padding: 15px;
+}
+
+.info.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.info_container {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+::-webkit-selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
 }
