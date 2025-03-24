@@ -410,3 +410,18 @@ nav h1 {
   background-color: var(--main-color);
   color: #fff;
 }
+
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: 100%;
+  }
+  .left {
+    height: fit-content;
+  }
+  .upload_container{
+    height: fit-content;
+    gap: 30px;
+    padding: 60px 0;
+  }
+}

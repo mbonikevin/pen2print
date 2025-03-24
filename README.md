@@ -4,10 +4,13 @@
 
 **Version**: 1.0  
 **Built by**: Kevin Kaneza Mbonimpaye  
-**Built on**: March 24, 2025  
+**Built on**: March 24, 2025   
 **Powered by**: Pen to Print API from [RapidAPI](https://rapidapi.com)
 
-**Demo**: [mbonikevin.tech](https://mbonikevin.tech)
+## Demo
+
+**Web app**: [mbonikevin.tech](https://mbonikevin.tech)  
+**Video**: [Watch YouTube Video]()
 
 ## Overview
 

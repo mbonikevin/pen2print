@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         loadingIndicator.style.zIndex = -10;
       }, 300);
-    //   loadingIndicator.style.display = "none";
+      //   loadingIndicator.style.display = "none";
       textEditor.removeAttribute("readonly");
     }
   }
@@ -82,6 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error extracting text:", error);
     } finally {
       toggleLoading(false);
+      // scrolling to the div with id "right"
+      document
+        .getElementById("right")
+        .scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 });
