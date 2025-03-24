@@ -391,6 +391,11 @@ nav h1 {
   font-weight: 400;
 }
 
+
+.info_container h2 a{
+  color: var(--main-color);
+}
+
 ::selection {
   background-color: var(--main-color);
   color: #fff;
