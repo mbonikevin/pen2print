@@ -10,7 +10,7 @@
 ## Demo
 
 **Web app**: [mbonikevin.tech](https://mbonikevin.tech)  
-**Video**: [Watch YouTube Video]()
+**Short Demo Video**: [Watch YouTube Video](https://youtu.be/16hfMYzJKoU)
 
 ## Overview
 
